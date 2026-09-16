@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://7o6eh6xgsn4r"]
 
-[ext_resource type="Texture2D" uid="uid://dlyhces72i6hu" path="res://icon.svg" id="1_8afob"]
 [ext_resource type="Script" uid="uid://dyme3ki1uqsna" path="res://scripts/player/player.gd" id="1_dovo2"]
+[ext_resource type="Texture2D" uid="uid://cg75h63cv602s" path="res://assets/art/circle6.png" id="2_dovo2"]
+[ext_resource type="Script" uid="uid://4o52loa63l0p" path="res://scripts/player/movement.gd" id="3_gmlin"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dovo2"]
 radius = 83.60024
@@ -10,9 +11,14 @@ radius = 83.60024
 script = ExtResource("1_dovo2")
 
 [node name="Visual" type="Sprite2D" parent="." unique_id=1322997371]
-texture = ExtResource("1_8afob")
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("2_dovo2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1632240576]
 shape = SubResource("CircleShape2D_dovo2")
+
+[node name="Movement" type="Node" parent="." unique_id=452039297]
+script = ExtResource("3_gmlin")
+move_speed = 800.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=384834335]
