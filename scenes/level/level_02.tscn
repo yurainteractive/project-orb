@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://3p46556hk552"]
+
+[ext_resource type="PackedScene" uid="uid://v6ng0og5twld" path="res://scenes/level/level_base.tscn" id="1_u3cpk"]
+[ext_resource type="PackedScene" uid="uid://d70egwiorlpr" path="res://scenes/world/hazard.tscn" id="2_56gcw"]
+[ext_resource type="PackedScene" uid="uid://0w784v12faey" path="res://scenes/world/goal.tscn" id="3_5g03a"]
+
+[node name="Level02" unique_id=871908360 instance=ExtResource("1_u3cpk")]
+level_id = 2
+
+[node name="Hazard" parent="Hazards" parent_id_path=PackedInt32Array(1354401117) index="0" unique_id=1256310948 instance=ExtResource("2_56gcw")]
+position = Vector2(-1569, 118)
+
+[node name="Goal" parent="." index="4" unique_id=1317671728 instance=ExtResource("3_5g03a")]

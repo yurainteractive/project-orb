@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://7oi47gsyvw24"]
+
+[ext_resource type="Texture2D" uid="uid://tlx558jqt73i" path="res://assets/art/collectible.png" id="1_4ph35"]
+[ext_resource type="Script" uid="uid://b580nhlp7e5wl" path="res://scripts/world/collectible.gd" id="1_absyw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ph35"]
+radius = 58.0
+height = 158.0
+
+[node name="Collectible" type="Area2D" unique_id=2108560587 groups=["collectible"]]
+script = ExtResource("1_absyw")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=433582395]
+texture = ExtResource("1_4ph35")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="." unique_id=457525558]
+shape = SubResource("CapsuleShape2D_4ph35")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ck854414wx171"]
+
+[ext_resource type="Script" uid="uid://ct5p13t645y4s" path="res://scripts/world/bounce_pad.gd" id="1_7b4j8"]
+[ext_resource type="Texture2D" uid="uid://buorwwbn7lru4" path="res://assets/art/circle5.png" id="1_gks7d"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7b4j8"]
+radius = 30.0
+height = 348.0
+
+[node name="BouncePad" type="Area2D" unique_id=1083682784]
+script = ExtResource("1_7b4j8")
+
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=1056320440]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_7b4j8")
+
+[node name="Visual" type="Sprite2D" parent="." unique_id=343879039]
+texture = ExtResource("1_gks7d")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

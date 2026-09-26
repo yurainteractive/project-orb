@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://d70egwiorlpr"]
+
+[ext_resource type="Texture2D" uid="uid://oimm0tr5bpra" path="res://assets/art/hazard-placeholder.png" id="1_6ula4"]
+[ext_resource type="Script" uid="uid://fu834lkw1fmh" path="res://scenes/world/hazard.gd" id="1_kwvja"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_6ula4"]
+a = Vector2(-123, -62)
+b = Vector2(-150, 48)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_k23bh"]
+a = Vector2(-126, -62)
+b = Vector2(125, -62)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_kwvja"]
+a = Vector2(128, -64)
+b = Vector2(157, 52)
+
+[node name="Hazard" type="Area2D" unique_id=1256310948 groups=["Hazard"]]
+script = ExtResource("1_kwvja")
+
+[node name="Visual" type="Sprite2D" parent="." unique_id=325929317]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_6ula4")
+
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=1786792437]
+position = Vector2(-3, 1)
+shape = SubResource("SegmentShape2D_6ula4")
+
+[node name="Collision2" type="CollisionShape2D" parent="." unique_id=1501609598]
+shape = SubResource("SegmentShape2D_k23bh")
+
+[node name="Collision3" type="CollisionShape2D" parent="." unique_id=1587712856]
+position = Vector2(-3, 1)
+shape = SubResource("SegmentShape2D_kwvja")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

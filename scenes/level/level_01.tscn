@@ -1,32 +1,29 @@
 [gd_scene format=3 uid="uid://dnr7rvgqulpxf"]
 
-[ext_resource type="PackedScene" uid="uid://7o6eh6xgsn4r" path="res://scenes/player/player.tscn" id="1_2r62q"]
+[ext_resource type="PackedScene" uid="uid://v6ng0og5twld" path="res://scenes/level/level_base.tscn" id="1_2r62q"]
+[ext_resource type="PackedScene" uid="uid://d70egwiorlpr" path="res://scenes/world/hazard.tscn" id="2_83vdy"]
+[ext_resource type="PackedScene" uid="uid://0w784v12faey" path="res://scenes/world/goal.tscn" id="3_3gack"]
+[ext_resource type="PackedScene" uid="uid://7oi47gsyvw24" path="res://scenes/world/collectible.tscn" id="3_fql8k"]
+[ext_resource type="PackedScene" uid="uid://5f5lyashvnce" path="res://scenes/world/checkpoint.tscn" id="4_fql8k"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_2r62q"]
+[node name="Level" unique_id=871908360 instance=ExtResource("1_2r62q")]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_v8hvj"]
+[node name="Wall" parent="Environment" parent_id_path=PackedInt32Array(1425243335) index="2" unique_id=1961297178]
+position = Vector2(5331, -16)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_83vdy"]
-size = Vector2(0.9904766, 1.0220821)
+[node name="Hazard" parent="Hazards" parent_id_path=PackedInt32Array(1354401117) index="0" unique_id=1256310948 instance=ExtResource("2_83vdy")]
+position = Vector2(-1236, 119)
 
-[node name="Level01" type="Node2D" unique_id=1196424977]
+[node name="Collectible" parent="Collectibles" parent_id_path=PackedInt32Array(1509758315) index="0" unique_id=2108560587 instance=ExtResource("3_fql8k")]
+position = Vector2(-2286, -104)
+collectible_id = &"23"
 
-[node name="BG" type="Sprite2D" parent="." unique_id=1850317288]
-position = Vector2(5.875, -27.999989)
-scale = Vector2(1310.25, 361.5)
-texture = SubResource("PlaceholderTexture2D_2r62q")
+[node name="Collectible2" parent="Collectibles" parent_id_path=PackedInt32Array(1509758315) index="1" unique_id=166993874 instance=ExtResource("3_fql8k")]
+position = Vector2(-2643, 32)
+collectible_id = &"10"
 
-[node name="PlayerSpawn" type="Node2D" parent="." unique_id=1326721507]
+[node name="Checkpoint" parent="Checkpoints" parent_id_path=PackedInt32Array(1422348539) index="0" unique_id=675416703 instance=ExtResource("4_fql8k")]
+position = Vector2(-1893, -79)
 
-[node name="Player" parent="PlayerSpawn" unique_id=2031254836 instance=ExtResource("1_2r62q")]
-
-[node name="Wall" type="StaticBody2D" parent="." unique_id=306965957]
-position = Vector2(748, -16)
-scale = Vector2(52.5, 158.5)
-
-[node name="Visual" type="Sprite2D" parent="Wall" unique_id=926678313]
-texture = SubResource("PlaceholderTexture2D_v8hvj")
-
-[node name="Collision" type="CollisionShape2D" parent="Wall" unique_id=227207929]
-position = Vector2(-0.019047737, 0)
-shape = SubResource("RectangleShape2D_83vdy")
+[node name="Goal" parent="." index="4" unique_id=1317671728 instance=ExtResource("3_3gack")]
+position = Vector2(1503, 0)

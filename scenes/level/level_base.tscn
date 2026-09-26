@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://v6ng0og5twld"]
+
+[ext_resource type="Script" uid="uid://b3trxex5n20v3" path="res://scenes/level/level.gd" id="1_uj0hi"]
+[ext_resource type="PackedScene" uid="uid://7o6eh6xgsn4r" path="res://scenes/player/player.tscn" id="2_rgbux"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_qkmgm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vpf64"]
+size = Vector2(8700, 186)
+
+[sub_resource type="Gradient" id="Gradient_2r62q"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hnne4"]
+gradient = SubResource("Gradient_2r62q")
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_wcngd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xv074"]
+size = Vector2(0.9904766, 1.0220821)
+
+[node name="Level" type="Node2D" unique_id=871908360]
+script = ExtResource("1_uj0hi")
+player_scene = ExtResource("2_rgbux")
+
+[node name="Environment" type="Node2D" parent="." unique_id=1425243335]
+
+[node name="Backgound" type="Sprite2D" parent="Environment" unique_id=670562977]
+position = Vector2(5.875, -27.999989)
+scale = Vector2(6034.2373, 557.9705)
+texture = SubResource("PlaceholderTexture2D_qkmgm")
+
+[node name="Ground" type="StaticBody2D" parent="Environment" unique_id=300138393]
+position = Vector2(0, 276)
+
+[node name="Collision" type="CollisionShape2D" parent="Environment/Ground" unique_id=615003223]
+position = Vector2(1001, 0)
+shape = SubResource("RectangleShape2D_vpf64")
+
+[node name="Visual" type="Sprite2D" parent="Environment/Ground" unique_id=1071650266]
+position = Vector2(1001, 0)
+scale = Vector2(135.53876, 2.96875)
+texture = SubResource("GradientTexture2D_hnne4")
+
+[node name="Wall" type="StaticBody2D" parent="Environment" unique_id=1961297178]
+position = Vector2(2653, -16)
+scale = Vector2(52.5, 158.5)
+
+[node name="Visual" type="Sprite2D" parent="Environment/Wall" unique_id=1455172689]
+texture = SubResource("PlaceholderTexture2D_wcngd")
+
+[node name="Collision" type="CollisionShape2D" parent="Environment/Wall" unique_id=849615542]
+position = Vector2(-0.019047737, 0)
+shape = SubResource("RectangleShape2D_xv074")
+
+[node name="Platforms" type="Node2D" parent="Environment" unique_id=773342536]
+
+[node name="Hazards" type="Node2D" parent="." unique_id=1354401117]
+
+[node name="Collectibles" type="Node2D" parent="." unique_id=1509758315]
+
+[node name="Checkpoints" type="Node2D" parent="." unique_id=1422348539]
+
+[node name="PlayerSpawn" type="Marker2D" parent="." unique_id=1192665220]
+position = Vector2(-3011, 0)

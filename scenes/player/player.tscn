@@ -3,11 +3,12 @@
 [ext_resource type="Script" uid="uid://dyme3ki1uqsna" path="res://scripts/player/player.gd" id="1_dovo2"]
 [ext_resource type="Texture2D" uid="uid://cg75h63cv602s" path="res://assets/art/circle6.png" id="2_dovo2"]
 [ext_resource type="Script" uid="uid://4o52loa63l0p" path="res://scripts/player/movement.gd" id="3_gmlin"]
+[ext_resource type="Script" uid="uid://coea7dqhwendu" path="res://scenes/player/bounce.gd" id="4_lvxji"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dovo2"]
 radius = 83.60024
 
-[node name="Player" type="CharacterBody2D" unique_id=2031254836]
+[node name="Player" type="CharacterBody2D" unique_id=2031254836 groups=["Player"]]
 script = ExtResource("1_dovo2")
 
 [node name="Visual" type="Sprite2D" parent="." unique_id=1322997371]
@@ -19,6 +20,14 @@ shape = SubResource("CircleShape2D_dovo2")
 
 [node name="Movement" type="Node" parent="." unique_id=452039297]
 script = ExtResource("3_gmlin")
-move_speed = 800.0
+move_speed = 720.0
+acceleration = 1300.0
+declaration = 1900.0
+gravity = 1500.0
+jump_velocity = -580.0
+
+[node name="Bounce" type="Node" parent="." unique_id=1799245873]
+script = ExtResource("4_lvxji")
+bounce_velocity = -880.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=384834335]
