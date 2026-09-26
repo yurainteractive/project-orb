@@ -1,13 +1,23 @@
 [gd_scene format=3 uid="uid://3p46556hk552"]
 
 [ext_resource type="PackedScene" uid="uid://v6ng0og5twld" path="res://scenes/level/level_base.tscn" id="1_u3cpk"]
-[ext_resource type="PackedScene" uid="uid://d70egwiorlpr" path="res://scenes/world/hazard.tscn" id="2_56gcw"]
+[ext_resource type="PackedScene" uid="uid://7oi47gsyvw24" path="res://scenes/world/collectible.tscn" id="2_56gcw"]
 [ext_resource type="PackedScene" uid="uid://0w784v12faey" path="res://scenes/world/goal.tscn" id="3_5g03a"]
 
-[node name="Level02" unique_id=871908360 instance=ExtResource("1_u3cpk")]
+[node name="Level" unique_id=871908360 instance=ExtResource("1_u3cpk")]
 level_id = 2
 
-[node name="Hazard" parent="Hazards" parent_id_path=PackedInt32Array(1354401117) index="0" unique_id=1256310948 instance=ExtResource("2_56gcw")]
-position = Vector2(-1569, 118)
+[node name="Collectible" parent="Collectibles" parent_id_path=PackedInt32Array(1509758315) index="0" unique_id=2108560587 instance=ExtResource("2_56gcw")]
+position = Vector2(-1917, 0)
 
-[node name="Goal" parent="." index="4" unique_id=1317671728 instance=ExtResource("3_5g03a")]
+[node name="Collectible2" parent="Collectibles" parent_id_path=PackedInt32Array(1509758315) index="1" unique_id=136160181 instance=ExtResource("2_56gcw")]
+position = Vector2(-1614, 0)
+
+[node name="Collectible3" parent="Collectibles" parent_id_path=PackedInt32Array(1509758315) index="2" unique_id=277524740 instance=ExtResource("2_56gcw")]
+position = Vector2(-1318, 0)
+
+[node name="Collectible4" parent="Collectibles" parent_id_path=PackedInt32Array(1509758315) index="3" unique_id=365825556 instance=ExtResource("2_56gcw")]
+position = Vector2(-992, 0)
+
+[node name="Goal" parent="." index="5" unique_id=1317671728 instance=ExtResource("3_5g03a")]
+position = Vector2(215, 0)

@@ -32,6 +32,7 @@ func get_spawn_position() -> Vector2:
 	
 func _on_goal_reached() -> void:
 	print("Level Completed: ", level_id)
+	LevelManager.load_next_level()
 
 func spawn_player() -> void:
 	player = player_scene.instantiate()
@@ -58,4 +59,5 @@ func _on_collectible_collected(collectible: Collectible, id: StringName)->void :
 	collectible.queue_free()
 
 func _on_checkpoint_activated(checkpoint: Checkpoint) -> void :
+	print("Checkpoint Activated!")
 	active_spawn_position = checkpoint.global_position

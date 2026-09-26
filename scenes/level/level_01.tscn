@@ -12,7 +12,8 @@
 position = Vector2(5331, -16)
 
 [node name="Hazard" parent="Hazards" parent_id_path=PackedInt32Array(1354401117) index="0" unique_id=1256310948 instance=ExtResource("2_83vdy")]
-position = Vector2(-1236, 119)
+position = Vector2(-1236, 143)
+scale = Vector2(0.6, 0.6)
 
 [node name="Collectible" parent="Collectibles" parent_id_path=PackedInt32Array(1509758315) index="0" unique_id=2108560587 instance=ExtResource("3_fql8k")]
 position = Vector2(-2286, -104)

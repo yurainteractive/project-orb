@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cejrpty4d3bck"]
 
-[ext_resource type="PackedScene" uid="uid://v6ng0og5twld" path="res://scenes/level/level_base.tscn" id="1_dphjl"]
+[ext_resource type="PackedScene" uid="uid://dnr7rvgqulpxf" path="res://scenes/level/level_01.tscn" id="1_dphjl"]
 
 [node name="World" type="Node2D" unique_id=1858403825]
 

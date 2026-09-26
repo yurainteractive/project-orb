@@ -15,6 +15,10 @@ run/main_scene="uid://x1mr8a3hfw2r"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+LevelManager="*uid://dklfe17udf6nv"
+
 [global_group]
 
 Player="this is group only for playable char"

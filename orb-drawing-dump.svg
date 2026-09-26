@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1.8116735"
-     inkscape:cx="-567.70714"
-     inkscape:cy="1015.3595"
+     inkscape:zoom="0.90583675"
+     inkscape:cx="-390.79889"
+     inkscape:cy="1118.855"
      inkscape:window-width="1600"
      inkscape:window-height="877"
      inkscape:window-x="-8"
@@ -126,7 +126,7 @@
        transform="matrix(1.0255248,0,0,0.28817299,-3.65135,153.65529)" />
     <path
        sodipodi:type="star"
-       style="opacity:1;fill:#4d4d4d;stroke:#666666;stroke-width:5.29167;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       style="opacity:1;fill:#66ff00;stroke:#800080;stroke-width:5.29167;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
        id="path2"
        inkscape:flatsided="true"
        sodipodi:sides="3"
@@ -140,7 +140,7 @@
        inkscape:randomized="0"
        d="m -24.222398,126.25424 -20.487791,0 10.243896,-17.74294 z"
        inkscape:transform-center-y="-6.1359516"
-       transform="matrix(0.90445869,0,0,2.0749505,265.42729,-59.000745)"
+       transform="matrix(0.90445869,0,0,2.0749505,-31.532049,67.473018)"
        inkscape:transform-center-x="-4.8185536e-06"
        inkscape:export-filename="assets\art\hazard-placeholder.png"
        inkscape:export-xdpi="96"
@@ -341,5 +341,26 @@
          style="fill:#aa4400;stroke:none;stroke-width:3.5336"
          x="-162.36174"
          y="274.17734">G</tspan></text>
+    <path
+       sodipodi:type="star"
+       style="opacity:1;fill:#66ff00;stroke:#800080;stroke-width:5.29167;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       id="path8"
+       inkscape:flatsided="true"
+       sodipodi:sides="3"
+       sodipodi:cx="-34.466293"
+       sodipodi:cy="120.33993"
+       sodipodi:r1="11.828631"
+       sodipodi:r2="5.9143152"
+       sodipodi:arg1="0.52359878"
+       sodipodi:arg2="1.5707963"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m -24.222398,126.25424 -20.487791,0 10.243896,-17.74294 z"
+       inkscape:transform-center-y="6.1359564"
+       transform="matrix(-0.90445869,0,0,-2.0749505,-93.878736,554.59985)"
+       inkscape:transform-center-x="5.0965658e-06"
+       inkscape:export-filename="assets\art\checkpoint.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
   </g>
 </svg>
